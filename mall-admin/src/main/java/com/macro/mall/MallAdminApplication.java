@@ -13,3 +13,4 @@ public class MallAdminApplication {
         SpringApplication.run(MallAdminApplication.class, args);
     }
 }
+

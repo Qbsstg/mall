@@ -5,6 +5,7 @@ import com.macro.mall.model.UmsPermission;
 import com.macro.mall.model.UmsResource;
 import com.macro.mall.model.UmsRole;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * 自定义后台用户与角色管理Dao
  * Created by macro on 2018/10/8.
  */
+@Service
 public interface UmsAdminRoleRelationDao {
     /**
      * 批量插入用户角色关系

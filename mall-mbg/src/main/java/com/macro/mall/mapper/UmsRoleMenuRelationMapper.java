@@ -4,7 +4,9 @@ import com.macro.mall.model.UmsRoleMenuRelation;
 import com.macro.mall.model.UmsRoleMenuRelationExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UmsRoleMenuRelationMapper {
     long countByExample(UmsRoleMenuRelationExample example);
 

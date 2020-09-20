@@ -27,6 +27,7 @@ redis:
   expire:
     common: 86400 # 24小时
 
+
 secure:
   ignored:
     urls: #安全路径白名单
@@ -65,3 +66,4 @@ minio:
   bucketName: mall #存储桶名称
   accessKey: minioadmin #访问的key
   secretKey: minioadmin #访问的秘钥
+

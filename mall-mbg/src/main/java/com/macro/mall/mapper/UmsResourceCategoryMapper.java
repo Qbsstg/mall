@@ -4,7 +4,9 @@ import com.macro.mall.model.UmsResourceCategory;
 import com.macro.mall.model.UmsResourceCategoryExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UmsResourceCategoryMapper {
     long countByExample(UmsResourceCategoryExample example);
 

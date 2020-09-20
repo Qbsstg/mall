@@ -8,6 +8,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Date;
@@ -162,9 +163,6 @@ public class JwtTokenUtil {
         Date created = claims.get(CLAIM_KEY_CREATED, Date.class);
         Date refreshDate = new Date();
         //刷新时间在创建时间的指定时间内
-        if(refreshDate.after(created)&&refreshDate.before(DateUtil.offsetSecond(created,time))){
-            return true;
-        }
-        return false;
+        return refreshDate.after(created) && refreshDate.before(DateUtil.offsetSecond(created, time));
     }
 }
